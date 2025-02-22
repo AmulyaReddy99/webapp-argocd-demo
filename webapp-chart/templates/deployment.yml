@@ -7,7 +7,7 @@ metadata:
   name: webapp
   namespace: default
 spec:
-  replicas: 1
+  replicas: {{ .values.replicaCount }}
   selector:
     matchLabels:
       app: webapp
@@ -19,7 +19,7 @@ spec:
         app: webapp
     spec:
       containers:
-      - image: amulyareddy99/lw:v1
+      - image: {{ .values.image }}
         name: lw
         resources: {}
 status: {}

@@ -1,0 +1,2 @@
+replicaCount: 1
+image: amulyareddy99/lw:v1
